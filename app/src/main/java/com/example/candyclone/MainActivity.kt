@@ -72,14 +72,14 @@ class MainActivity : AppCompatActivity() {
                 override fun onSwipeTop() {
                     super.onSwipeTop()
                     candyToBeDragged = imageView.id
-                    candyToBeReplaced = candyToBeDragged - noOfBlock
+                    candyToBeReplaced = candyToBeDragged + noOfBlock
                     candyInterchange()
                 }
 
                 override fun onSwipeBottom() {
                     super.onSwipeBottom()
                     candyToBeDragged = imageView.id
-                    candyToBeReplaced = candyToBeDragged + noOfBlock
+                    candyToBeReplaced = candyToBeDragged - noOfBlock
                     candyInterchange()
                 }
 
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
 
                 if(candy.get(x++).tag as Int == chosedCandy
                     && !isBlank
-                    && candy.get(x--).tag as Int == chosedCandy // Kan vara problem här YT 31:00
+                    && candy.get(x++).tag as Int == chosedCandy // Kan vara problem här YT 31:00
                     && candy.get(x).tag as Int == chosedCandy
                 ){
                     score = score + 3
