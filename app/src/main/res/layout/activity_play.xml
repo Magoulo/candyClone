@@ -10,12 +10,22 @@
     android:layout_gravity="center"
     android:background="@drawable/desert3"
     tools:context=".view.PlayActivity">
-    <ImageView
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/playBtn"
-        android:layout_gravity="center"
-        android:layout_marginTop="21dp"
-        android:src="@drawable/playbtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:width="220dp"
+        android:height="90dp"
+        android:fontFamily="cursive"
+        android:text="Play"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
 
 </LinearLayout>

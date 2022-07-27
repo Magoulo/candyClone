@@ -4,11 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatButton
 import com.example.candyclone.MainActivity
 import com.example.candyclone.R
 
 class PlayActivity : AppCompatActivity() {
-    private lateinit var playBtn : ImageView
+    private lateinit var playBtn : AppCompatButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play)
