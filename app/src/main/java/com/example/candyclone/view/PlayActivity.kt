@@ -10,6 +10,7 @@ import com.example.candyclone.R
 
 class PlayActivity : AppCompatActivity() {
     private lateinit var playBtn : AppCompatButton
+    private lateinit var highscoreBtn : AppCompatButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play)
@@ -21,6 +22,14 @@ class PlayActivity : AppCompatActivity() {
             startActivity(
                 Intent(this@PlayActivity,
                     MainActivity::class.java)
+            )
+        }
+
+        highscoreBtn = findViewById(R.id.highscoreBtn)
+        highscoreBtn.setOnClickListener{
+            startActivity(
+                Intent(this@PlayActivity,
+                    HighscoreActivity::class.java)
             )
         }
 

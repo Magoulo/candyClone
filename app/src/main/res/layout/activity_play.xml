@@ -18,7 +18,7 @@
         android:background="@drawable/rounded_button"
 
         android:layout_gravity="center"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="60dp"
         android:width="220dp"
         android:height="90dp"
         android:fontFamily="cursive"
@@ -26,6 +26,21 @@
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/highscoreBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#510400"
+        android:layout_gravity="center"
+        android:width="220dp"
+        android:height="90dp"
+        android:fontFamily="cursive"
+        android:text="Highscore"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
 
 </LinearLayout>
