@@ -13,12 +13,13 @@
         android:foreground="?android:attr/selectableItemBackground"
         android:layout_marginVertical="10dp"
         android:layout_marginHorizontal="15dp"
-        android:focusable="true" >
+        android:focusable="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="15dp">
+            android:padding="15dp"
+            android:background="@drawable/desert3">
 
             <ImageView
                 android:id="@+id/imageViewGroupChatList"
@@ -47,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="Magoulo - "
+                android:text="Rita - "
                 android:textStyle="bold"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"

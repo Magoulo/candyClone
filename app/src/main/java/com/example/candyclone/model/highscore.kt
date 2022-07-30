@@ -2,8 +2,8 @@ package com.example.candyclone.model
 
 import java.util.*
 
-data class highscore(
+data class Highscore(
     var highscore: Int? = null,
-    var date: Date? = null,
+    var date: String? = null,
     var name: String? = null
 )
