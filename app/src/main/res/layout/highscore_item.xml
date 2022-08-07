@@ -38,6 +38,7 @@
                 android:layout_marginTop="8dp"
                 android:text="0P"
                 android:textSize="30sp"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageViewGroupChatList"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -51,6 +52,7 @@
                 android:text="Rita - "
                 android:textStyle="bold"
                 android:textSize="18sp"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageViewGroupChatList"
                 app:layout_constraintTop_toBottomOf="@+id/Highscore_Score" />
@@ -62,6 +64,7 @@
                 android:layout_marginTop="8dp"
                 android:text="2022-07-27"
                 android:textSize="18sp"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/Highscore_Name"

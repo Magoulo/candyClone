@@ -8,7 +8,9 @@ import android.widget.GridLayout
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.candyclone.uiltel.OnSwipeListener
+import java.util.*
 import java.util.Arrays.asList
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,6 +35,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var scoreResult :TextView
     var score = 0
     var interval = 100L
+
+    lateinit var timer: Timer
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
