@@ -30,5 +30,7 @@ class HighscoreActivity : AppCompatActivity() {
 
         val linearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager
+
     }
+
 }

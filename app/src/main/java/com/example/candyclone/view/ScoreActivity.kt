@@ -26,6 +26,7 @@ class ScoreActivity : AppCompatActivity() {
             Intent(this@ScoreActivity,
                 HighscoreActivity::class.java)
         )
+        finish()
 
         return super.onTouchEvent(event)
     }

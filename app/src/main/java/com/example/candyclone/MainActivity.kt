@@ -89,7 +89,9 @@ class MainActivity : AppCompatActivity() {
                         ScoreActivity::class.java)
                 intent.putExtra(EXTRA_SCORE,score)
                 startActivity(intent)
+                finish()
             }
+
 
         }
 
