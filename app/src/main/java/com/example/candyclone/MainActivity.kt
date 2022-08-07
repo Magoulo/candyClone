@@ -1,15 +1,20 @@
 package com.example.candyclone
 
+import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.util.DisplayMetrics
 import android.widget.GridLayout
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.candyclone.uiltel.OnSwipeListener
+import com.example.candyclone.view.ScoreActivity
 import java.util.*
 import java.util.Arrays.asList
+import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         R.drawable.redcandy,
         R.drawable.yellowcandy
     )
+    val EXTRA_SCORE = "EXTRA_SCORE"
 
     var widthOfBlock :Int = 0
     var noOfBlock :Int = 8
@@ -33,17 +39,24 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mHandler :Handler
     private lateinit var scoreResult :TextView
+
+    private lateinit var timer : CountDownTimer
+    private lateinit var timerText : TextView
+    private var timerDuration: Long = 60
+
     var score = 0
     var interval = 100L
-
-    lateinit var timer: Timer
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         scoreResult = findViewById(R.id.score)
+        timerText = findViewById(R.id.timer)
+
 
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
@@ -55,6 +68,30 @@ class MainActivity : AppCompatActivity() {
 
         candy = ArrayList()
         createBoard()
+
+        timer = object: CountDownTimer(timerDuration * 1000,1000){
+            override fun onTick(remaining: Long) {
+
+               // var time = String.format(Locale.getDefault(),"%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(remaining))
+                var calculatedTime = remaining / 1000
+                if(calculatedTime < 10){
+                    timerText.setTextColor(Color.RED)
+                    timerText.text = "00:0" + calculatedTime.toString()
+                } else {
+                    timerText.text = "00:" + calculatedTime.toString()
+                }
+
+            }
+
+            override fun onFinish() {
+
+                  val intent =  Intent(this@MainActivity,
+                        ScoreActivity::class.java)
+                intent.putExtra(EXTRA_SCORE,score)
+                startActivity(intent)
+            }
+
+        }
 
         for(imageView in candy){
 
@@ -238,4 +275,15 @@ class MainActivity : AppCompatActivity() {
             gridLayout.addView(imageView)
         }
     }
+
+    override fun onStart(){
+        super.onStart()
+        timer.start()
+    }
+
+    override fun onStop(){
+        super.onStop()
+        timer. cancel()
+    }
+
 }
