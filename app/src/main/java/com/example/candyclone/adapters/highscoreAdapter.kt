@@ -27,7 +27,7 @@ class HighscoreAdapter( private val highscore: MutableList<Highscore>): Recycler
 
         holder.highscore.text = curItem.highscore.toString() + " P"
         holder.date.text = curItem.date
-        holder.name.text = curItem.name + " - "
+        holder.name.text = curItem.name
     }
 
     override fun getItemCount(): Int {

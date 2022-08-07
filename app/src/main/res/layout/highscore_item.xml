@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="172dp"
+    android:layout_height="95dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="80dp"
         app:cardCornerRadius="15dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
@@ -19,13 +19,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="15dp"
-            android:background="@drawable/desert3">
+            android:background="@color/black">
 
-            <ImageView
-                android:id="@+id/imageViewGroupChatList"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@mipmap/ic_launcher"
+            <TextView
+                android:id="@+id/Highscore_Position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="1ST"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -35,27 +39,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:layout_marginTop="8dp"
                 android:text="0P"
-                android:textSize="30sp"
                 android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageViewGroupChatList"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/Highscore_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="Rita - "
-                android:textStyle="bold"
-                android:textSize="18sp"
+                android:text="Rita"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageViewGroupChatList"
-                app:layout_constraintTop_toBottomOf="@+id/Highscore_Score" />
+                android:textSize="24sp"
+                android:textStyle="bold"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/Highscore_Date"
@@ -63,12 +65,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="2022-07-27"
-                android:textSize="18sp"
                 android:textColor="@color/white"
+                android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/Highscore_Name"
-                app:layout_constraintTop_toBottomOf="@+id/Highscore_Score" />
+                app:layout_constraintTop_toBottomOf="@+id/Highscore_Name" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
