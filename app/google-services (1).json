@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "211476247892",
+    "project_id": "cactus-crush",
+    "storage_bucket": "cactus-crush.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211476247892:android:beb5e2b6000b0a10f684c1",
+        "android_client_info": {
+          "package_name": "com.example.candyclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211476247892-7s7jf8eslf2gmsbndpb3e6h5alah10f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaPfkCPQYB08RRjpJTd_vXzPFfv2ZTvyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211476247892-7s7jf8eslf2gmsbndpb3e6h5alah10f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
