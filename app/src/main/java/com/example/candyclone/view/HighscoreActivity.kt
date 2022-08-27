@@ -44,7 +44,7 @@ class HighscoreActivity : AppCompatActivity() {
         var lengthOfChat = 0
 
         db.collection("highscorer").orderBy( "highscore",
-            Query.Direction.ASCENDING)
+            Query.Direction.DESCENDING)
             .addSnapshotListener(object : EventListener<QuerySnapshot> {
 
                 override fun onEvent(
