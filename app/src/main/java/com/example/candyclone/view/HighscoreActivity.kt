@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.candyclone.R
 import com.example.candyclone.adapters.HighscoreAdapter
+import com.example.candyclone.firebase.HighscoreData
 import com.example.candyclone.model.Highscore
 import com.google.firebase.firestore.*
-import com.google.firebase.storage.FirebaseStorage
 
 class HighscoreActivity : AppCompatActivity() {
 
@@ -22,10 +22,13 @@ class HighscoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_highscore)
 
-        highscoreArrayList = arrayListOf() /*arrayListOf(Highscore(2000, "2022-02-02", "Magoulo"),
+        highscoreArrayList = HighscoreData.getHighscoreList() /*arrayListOf(Highscore(2000, "2022-02-02", "Magoulo"),
             Highscore(200, "2022-02-02", "Rita"),
             Highscore(199, "2022-02-02", "Sabina"),
             Highscore(1, "2022-02-02", "Chunggus"))*/
+        for (score in highscoreArrayList) {
+            Log.d("Highscore: ", score.toString())
+        }
 
         highscoreListAdapter = HighscoreAdapter(highscoreArrayList)
 
@@ -35,11 +38,10 @@ class HighscoreActivity : AppCompatActivity() {
         val linearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager
 
-
-        generateList()
+        //generateList()
     }
 
-    private fun generateList()  {
+   /* private fun generateList()  {
         val db = FirebaseFirestore.getInstance()
         var lengthOfChat = 0
 
@@ -62,11 +64,9 @@ class HighscoreActivity : AppCompatActivity() {
 
                         }
                     }
-                   // callback(lengthOfChat)
                     highscoreListAdapter.notifyDataSetChanged()
                 }
-
             })
-    }
+    }*/
 
 }
